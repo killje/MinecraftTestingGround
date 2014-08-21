@@ -55,10 +55,10 @@ public class Main extends JavaPlugin implements Listener {
     
     @EventHandler
     public void onHit(EntityDamageByEntityEvent e){
-        if (!e.getEntity().getType().equals(EntityType.FIREBALL)) {
+        if (!e.getDamager().getType().equals(EntityType.FIREBALL)) {
             return;
         }
-        if (((Fireball) e.getEntity()).getShooter() instanceof Player) {
+        if (((Fireball) e.getDamager()).getShooter() instanceof Player) {
             //DO STUFF
         }
     }
